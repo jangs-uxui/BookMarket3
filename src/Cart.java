@@ -20,19 +20,19 @@ public class Cart { // 카트관련 기능
 
     // ??
     public Book removeCartItem(String bookId) { // bookId일치하는 CartItem객체 삭제 (*책이 카트에 1권 있을 때)
-        Book delBook = null; // 삭제할 책 객체를 저장할 변수 선언
+        Book book = null; // 삭제할 책 객체를 저장할 변수 선언
         for (int i = 0; i < this.mCartItemCount; i++) { // mCartItemCount 만큼 for문 돌림
             if (this.mCart[i].getBook().getBookId().equals(bookId)) { // i번째 CartItem객체배열 Book객체의 bookId == bookId
-                delBook = this.mCart[i].getBook(); // 삭제할 책 Book객체 book변수에 저장
+                book = this.mCart[i].getBook(); // 삭제할 책 Book객체 book변수에 저장
                 this.removeCartItem(i); // i번째 장바구니 항목 제거
                 break; // for문 탈출
             }
         }
-        return delBook; // 삭제한 책 객체 반환 (못찾으면 null)
+        return book; // 삭제한 책 객체 반환 (못찾으면 null)
     }
     private void removeCartItem() { // [오버로딩] 카트 항목 삭제 (책이 카트에 1권 있을 때)
         // CartItem[] 배열에서 index부분 삭제 후 이후 원소 한칸식 당김
-
+        // 작업중..
     }
 
 
